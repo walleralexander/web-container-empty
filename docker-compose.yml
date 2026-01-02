@@ -1,0 +1,19 @@
+services:
+  php:
+    image: webdevops/php-apache:8.4
+    #php:8.5-apache
+    container_name: web-container-empty
+    restart: always
+    #ports:
+    #  - 80:80
+    volumes:
+      - ./html:/app
+    networks:
+      - dockernet
+
+networks:
+  dockernet:
+    external: true
+
+## https://webdevops.gitbook.io/dockerfile
+## https://dockerfile.readthedocs.io/en/latest/
