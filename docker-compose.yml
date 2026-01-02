@@ -4,8 +4,8 @@ services:
     #php:8.5-apache
     container_name: web-container-empty
     restart: always
-    #ports:
-    #  - 80:80
+    ports:
+      - 127.0.0.1:7080:80
     volumes:
       - ./html:/app
     networks:
